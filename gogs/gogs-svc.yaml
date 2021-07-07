@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gogs-svc
+  namespace: source-control
+spec:
+  type: LoadBalancer
+  selector:
+    app: gogs
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+  loadBalancerIP: 10.112.42.91
