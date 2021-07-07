@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+   name: jenkins-pv-nfs
+   namespace: jenkins
+spec:
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 9Gi
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /jenkins-master
+    server: 10.112.42.52
+    readOnly: false
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pvc-nfs
+  namespace: jenkins
+  labels:
+    app: jenkins-master
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+     requests:
+       storage: 9Gi
+
