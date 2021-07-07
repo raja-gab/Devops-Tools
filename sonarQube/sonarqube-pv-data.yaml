@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sonar-data-pv-nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 5Gi
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /sonar-data
+    server: 10.112.42.52
+    readOnly: false
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sonar-datapv-claim
+  namespace: sonarqube
+  labels:
+    app: sonarqube
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+     requests:
+       storage: 5Gi
+
