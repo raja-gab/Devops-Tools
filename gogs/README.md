@@ -51,8 +51,3 @@ En fonction de vos besoins, vous souhaiterez peut-être modifier:
   * transformer le déploiement en un StatefulSet ou un DaemonSet
 
 
-### Déploiement automatique
-
-
-## Usage 
-
