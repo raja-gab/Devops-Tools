@@ -24,7 +24,7 @@ $ kubectl create namespace gogs
 
 #### Déploiement de la base de données
 
-Utilisez le script [mysql.yaml](http://10.112.42.85/rajagabsi/Gogs/src/master/mysql.yaml) pour créer toutes les entités Kubernetes nécessaires.
+Utilisez le script [mysql.yaml](https://github.com/raja-gab/Devops-Tools/blob/main/gogs/mysql.yaml) pour créer toutes les entités Kubernetes nécessaires.
 Exécutez le script avec:
 ```
 $ kubectl apply -f mysql.yaml
@@ -38,7 +38,7 @@ En fonction de vos besoins, vous souhaiterez peut-être modifier:
 
 #### Déploiement de gogs
 
-Utilisez le script [gogs.yaml](http://10.112.42.85/rajagabsi/Gogs/src/master/gogs.yaml) pour créer toutes les entités Kubernetes nécessaires.
+Utilisez le script [gogs.yaml](https://github.com/raja-gab/Devops-Tools/blob/main/gogs/gogs.yaml) pour créer toutes les entités Kubernetes nécessaires.
 Exécutez le script avec:
 ```
 $ kubectl apply -f gogs.yaml
