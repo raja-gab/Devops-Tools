@@ -31,10 +31,10 @@ $ kubectl apply -f mysql.yaml
 ```
 En fonction de vos besoins, vous souhaiterez peut-être modifier:
 
-  * taille du volume persistant (actuellement 20 Go)
+  * taille du volume persistant (actuellement 9 Go)
   * image Docker (actuellement mysql:5.7)
-  * nombre de répliques
-  * transformer le déploiement en un StatefulSet ou un DaemonSet
+  * nombre de répliques égale 1
+
 
 #### Déploiement de gogs
 
@@ -45,9 +45,9 @@ $ kubectl apply -f gogs.yaml
 ```
 En fonction de vos besoins, vous souhaiterez peut-être modifier:
 
-  * taille du volume persistant (actuellement 2 Go)
+  * taille du volume persistant (actuellement 9 Go)
   * image Docker (actuellement gogs/gogs:0.11.91)
-  * nombre de répliques
-  * transformer le déploiement en un StatefulSet ou un DaemonSet
+  * nombre de répliques égale 1
+
 
 
